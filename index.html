@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="vectors-stopwatch.png" type="image/x-icon">
+    <title>Basketball Timer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+
+
+
+
+</head>
+
+
+<body>
+
+    <header><center><h1>FIBA Women</h1></center></header>
+
+    <fieldset>
+
+    <legend>Spielstand Eingabe</legend>
+<p>
+    <input type="checkbox" name="rug" id="rug">
+    <label for="Zahlen">Spiel Eins: </label><input title="Finaler Punktestand des 1.Spiels" class="sizeMatters" type="number" required placeholder="Punkte"> &mdash; <input title="Finaler Punktestand des 1.Spiels" type="number" required placeholder="Punkte" class="sizeMatters">
+</p>
+
+<p>
+    <input type="checkbox" name="bulb" id="bulb">
+    <label for="Zahlen">Spiel Zwei: </label><input title="Finaler Punktestand des 2.Spiels" type="number" required placeholder="Punkte" class="sizeMatters"> &mdash; <input title="Finaler Punktestand des 2.Spiels" type="number" required placeholder="Punkte" class="sizeMatters">
+</p>
+
+<p>
+    <input type="checkbox" name="saw" id="saw">
+    <label for="Zahlen">Spiel Drei: </label><input title="Finaler Punktestand des 3.Spiels" type="number" required placeholder="Punkte" class="sizeMatters"> &mdash; <input title="Finaler Punktestand des 3.Spiels" type="number" required placeholder="Punkte" class="sizeMatters">
+</p>
+
+<p>
+    <input type="checkbox" name="saw" id="saw">
+    <label for="Zahlen">Spiel Vier: </label><input title="Finaler Punktestand des 4.Spiels" type="number" required placeholder="Punkte" class="sizeMatters"> &mdash; <input title="Finaler Punktestand des 4.Spiels" type="number" required placeholder="Punkte" class="sizeMatters">
+</p>
+
+</fieldset>
+
+<br><br>
+    <center><button onclick="resetScore()"><p><strong>RESET SCORE</strong></p></button></center>
+
+    <section class="points">
+
+        <div class="pointsDiv">
+
+        <button onclick="brasilOnePoint()"><p><strong>1 P</strong></p></button>
+        <button onclick="brasilTwoPoints()"><p><strong>2 PP</strong></p></button>
+        <button onclick="brasilThreePoints()"><p><strong>3 PPP</strong></p></button>
+
+        </div>
+
+        <div class="wrapTheText">
+        
+        <P><mark id="scoreBrazil">0</mark></P>
+        <span>*_</span><input title="Gebe hier einen Teamnamen an" type="text" name="Team1" id="Team1" required placeholder="Team">
+
+        <p>_gegen_</p>
+
+        <input title="Gebe hier einen Teamnamen an" type="text" name="Team2" id="Team2" required placeholder="Team"><span>_*</span>
+        <P><mark id="scoreFrance">0</mark></P>
+
+        </div>
+
+        <div class="pointsDiv">
+
+        <button onclick="franceAddOnePoint()"><p><strong>1 P</strong></p></button>
+        <button onclick="franceAddTwoPoints()"><p><strong>2 PP</strong></p></button>
+        <button onclick="franceAddThreePoints()"><p><strong>3 PPP</strong></p></button>
+
+
+
+        </div>
+
+
+    </section>
+
+    <main>
+
+    <h2>:::::::::: Shotclock :::::::::::</h1>
+    <div id="shotDisplay" class="uhr">24</div>
+    <div><button id="shotStartBtn" class="BigButt">Start</button>
+    <button id="shotResetBtn" class="BigButt">Restart</button>
+    </div>
+
+    <hr>
+
+    <h2>:::::::::: Gameclock ::::::::::</h1>
+    <div id="minuteDisplay" class="uhr">10:00</div>
+    <button id="minuteStartBtn" class="BigButt">Start</button>
+    <button id="minuteResetBtn" class="BigButt">Reset</button>
+
+    </main>
+
+</body>
+
+
+</body>
+</html>
